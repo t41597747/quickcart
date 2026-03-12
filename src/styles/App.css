@@ -1,0 +1,60 @@
+/* Reset basic styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 36px;
+  background: #222;
+  color: white;
+  width: 100%;
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Product card */
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Image */
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text styles */
+.product-card h3 {
+  margin: 10px 0 5px 0;
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.category {
+  font-size: 14px;
+  color: gray;
+}
+
+.product-card h4 {
+  color: green;
+  margin-top: 8px;
+}

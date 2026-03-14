@@ -1,4 +1,4 @@
-function CartSidebar({ isOpen, cart, onClose, onUpdateQuantity, onRemoveItem }) {
+function CartSidebar({ isOpen, cart, onClose, onUpdateQuantity, onRemoveItem, totalPrice }) {
   return (
     <div className={`cart-sidebar ${isOpen ? "open" : ""}`}>
       <div className="cart-header">
@@ -6,10 +6,18 @@ function CartSidebar({ isOpen, cart, onClose, onUpdateQuantity, onRemoveItem }) 
         <button onClick={onClose}>X</button>
       </div>
 
-      {cart.length === 0 ? (
-        <p>Your cart is empty</p>
-      ) : (
-        cart.map((item) => (
+        {cart.length === 0 ? (
+  <p>Your cart is empty</p>
+) : (
+  cart.map((item) => (
+    <div key={item.id} className="cart-item">
+      {/* item content */}
+    </div>
+  ))
+)}
+<div style={{ marginTop: "20px", fontWeight: "bold" }}>
+  Total: ${totalPrice}
+</div>
           <div key={item.id} className="cart-item">
             <img src={item.image} alt={item.name} />
 
@@ -37,8 +45,6 @@ function CartSidebar({ isOpen, cart, onClose, onUpdateQuantity, onRemoveItem }) 
               </button>
             </div>
           </div>
-        ))
-      )}
     </div>
   );
 }
